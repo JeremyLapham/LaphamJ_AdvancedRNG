@@ -12,7 +12,7 @@ const group4 = document.getElementById('group4');
 const group5 = document.getElementById('group5');
 
 enterName.addEventListener('keydown', function (e) {
-    let letters = /^[A-Za-z-]+$/;
+    let letters = /^[A-Za-z-,. ]+$/;
     if (e.key === 'Enter') {
         if (enterName.value == '' || !enterName.value.match(letters)) {
             alert('Please enter a valid')
@@ -24,7 +24,7 @@ enterName.addEventListener('keydown', function (e) {
     }
 });
 enterNameBtn.addEventListener('click', function () {
-    let letters = /^[A-Za-z-]+$/;
+    let letters = /^[A-Za-z-,. ]+$/;
     if (enterName.value == '' || !enterName.value.match(letters)) {
         alert('Please enter a valid')
     } else {
@@ -62,13 +62,13 @@ function displayNamesOnScreen() {
 
         let col1 = document.createElement('div');
         col1.className = 'col-6';
-        
+
         let col2 = document.createElement('div');
         col2.className = 'col-6';
         col2.style.display = 'flex';
         col2.style.alignItems = 'center';
         col2.style.justifyContent = 'center';
-        
+
         let h2 = document.createElement('h2');
         h2.textContent = name;
 
@@ -95,45 +95,6 @@ function nameLength() {
     let peopleNames = getLocalStoage()
     nameLengthDisplay.textContent = `Names in list: ${peopleNames.length}`;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const body = document.getElementById('body');
 const sun1 = document.getElementById('sun1');

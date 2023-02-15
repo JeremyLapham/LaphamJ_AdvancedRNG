@@ -1,14 +1,19 @@
 const rndBtn = document.getElementById('rndBtn');
 const displayRndName = document.getElementById('displayRndName');
 
-rndBtn.addEventListener('click', function() {
+rndBtn.addEventListener('click', function () {
     let names = getLocalStoage();
-    let rndName = names[Math.floor(Math.random()*names.length)];
+    let rndName = names[Math.floor(Math.random() * names.length)];
     displayRndName.textContent = rndName;
 })
 
 function saveToLocalStorage(name) {
     let names = getLocalStoage();
+
+    if (names.includes(name)) {
+        alert('Name is already in the list so if they have the same name add their last name initial');
+        return;
+    }
 
     names.push(name);
     localStorage.setItem('People', JSON.stringify(names));
@@ -18,7 +23,7 @@ function saveToLocalStorage(name) {
 function getLocalStoage() {
     let localStorageData = localStorage.getItem('People');
 
-    if(localStorageData == null){
+    if (localStorageData == null) {
         return [];
     }
 
@@ -29,7 +34,7 @@ function removeFromLocalStorage(name) {
     let names = getLocalStoage();
     let nameIndex = names.indexOf(name);
 
-    names.splice(nameIndex,1);
+    names.splice(nameIndex, 1);
     localStorage.setItem('People', JSON.stringify(names));
 }
 

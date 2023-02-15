@@ -30,8 +30,10 @@
 
 .previousBG {
     background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-    height: fit-content;
+    border-radius: 0 0 20px 20px;
+    height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
     width: 1200px;
     padding-bottom: 1rem;
     margin-bottom: 3rem;
@@ -70,45 +72,10 @@
 .groups {
     background-color: rgba(255, 255, 255, 0.75);
     margin-left: 1rem;
-    font-size:22px;
-    padding:5px 5px 0 5px;
+    font-size: 22px;
+    padding: 5px 5px 0 5px;
     border-radius: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .circleSun {
     background-color: #FFB800;
@@ -180,7 +147,6 @@
     z-index: -1;
     transform: rotate(90deg);
 }
-
 
 .hide {
     display: none;
