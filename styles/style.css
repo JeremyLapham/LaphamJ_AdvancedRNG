@@ -18,20 +18,23 @@
 
 .body {
     background-image:
-    linear-gradient(to right,
-    white, #0076E4);
+        linear-gradient(to right,
+            white, #0076E4);
 }
 
 .body2 {
     background-image:
-    linear-gradient(to right,
-    white, #380257);
+        linear-gradient(to right,
+            white, #380257);
 }
+
 .previousBG {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    height: 200px;
-    width: 1000px;
+    height: fit-content;
+    width: 1200px;
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 
 .center {
@@ -39,11 +42,38 @@
     justify-content: center;
 }
 
+.deleteBtnPlace {
+    display: flex;
+    justify-content: end;
+}
+
 .space {
     white-space: pre-line;
 }
 
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
 
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #9C9C9C;
+}
+
+.groups {
+    background-color: rgba(255, 255, 255, 0.75);
+    margin-left: 1rem;
+    font-size:22px;
+    padding:5px 5px 0 5px;
+    border-radius: 10px;
+}
 
 
 
@@ -107,7 +137,7 @@
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    margin:1rem 0rem 0rem 5rem;
+    margin: 1rem 0rem 0rem 5rem;
     position: fixed;
     z-index: -1;
 }
@@ -117,7 +147,7 @@
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    margin:5rem 0rem 0rem 2.5rem;
+    margin: 5rem 0rem 0rem 2.5rem;
     position: fixed;
     z-index: -1;
 }
@@ -126,7 +156,7 @@
     background-color: #FFB800;
     height: 15px;
     width: 250px;
-    margin:1rem 0rem 0rem 15rem;
+    margin: 1rem 0rem 0rem 15rem;
     position: fixed;
     z-index: -1;
 }
@@ -135,7 +165,7 @@
     background-color: #FFB800;
     height: 15px;
     width: 250px;
-    margin:16rem 0rem 0rem 8rem;
+    margin: 16rem 0rem 0rem 8rem;
     position: fixed;
     z-index: -1;
     transform: rotate(45deg);
@@ -145,7 +175,7 @@
     background-color: #FFB800;
     height: 15px;
     width: 250px;
-    margin:22rem 0rem 0rem -6rem;
+    margin: 22rem 0rem 0rem -6rem;
     position: fixed;
     z-index: -1;
     transform: rotate(90deg);
